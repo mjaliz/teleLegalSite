@@ -1,0 +1,21 @@
+{
+  "name": "telelegal-back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "mkcert-ca": "mkcert create-ca",
+    "mkcert-cert": "mkcert create-cert",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "mkcert": "^3.2.0"
+  }
+}
