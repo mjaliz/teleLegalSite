@@ -3,9 +3,17 @@ import "./App.css";
 import socketConnection from "./utils/socketConnection";
 import MainVideoPage from "./videoComponents/MainVideoPage";
 
+const Home = () => <h1>Home page</h1>;
+
 function App() {
-  return 
-  <div className="App">App</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route exact path="/join-video" Component={MainVideoPage} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
