@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import "./VideoComponent.css";
+import CallInfo from "./CallInfo";
+import ChatWindow from "./ChatWindow";
 
 const MainVideoPage = () => {
   // Get query string finder hook
@@ -21,8 +24,18 @@ const MainVideoPage = () => {
   }, []);
 
   return (
-    <div>
-      {apptInfo.proffessionalsFullName} at {apptInfo.apptDate}
+    <div className="main-video-page">
+      <div className="video-chat-wrapper">
+        {/* Div to hold our remote video, our local video and our chat window */}
+        <video id="large-feed" autoPlay controls playsInline></video>
+        <video id="own-feed" autoPlay controls playsInline></video>
+        {apptInfo.proffessionalsFullName ? (
+          <CallInfo apptInfo={apptInfo} />
+        ) : (
+          <></>
+        )}
+        {<ChatWindow />}
+      </div>
     </div>
   );
 };
