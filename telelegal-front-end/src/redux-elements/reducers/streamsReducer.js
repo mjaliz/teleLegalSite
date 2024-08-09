@@ -5,6 +5,7 @@
 // }
 
 // local, remote1, remote2+
+// For more users you can check WebRTC SFU, and a Go implementation of if it call livekit 'https://docs.livekit.io'
 
 export default (state = {}, action) => {
   if (action.type === "ADD_STREAM") {
